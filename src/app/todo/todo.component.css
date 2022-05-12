@@ -1,0 +1,36 @@
+.bg-image {
+  background-image: url("../../assets/bg-desktop-light.jpg");
+  width: 100vw;
+  height: 45vh;
+}
+
+.zIndex {
+  z-index: 100;
+}
+
+.level {
+  margin-top: -200px;
+}
+
+.listItem {
+  font-weight: lighter;
+}
+
+.listItem:hover {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.listItem:hover #showDel {
+  display: inline !important;
+}
+
+.radios {
+  width: 17px !important;
+  height: 17px !important;
+  border-radius: 50% !important;
+}
+
+#showDel {
+  display: none;
+}

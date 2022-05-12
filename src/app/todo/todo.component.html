@@ -1,0 +1,44 @@
+<div>
+  <div class="bg-image"></div>
+  <div class="container level">
+    <div class="row" (keyup.enter)="editMode ? handleSaveEdit() : handleTodo()">
+      <div class="col-12 col-md-6 mx-auto">
+        <p class="display-4 text-white">Todo</p>
+        <input
+          type="text"
+          class="w-100 form-control mb-4 p-3 bg-white"
+          placeholder="Todo"
+          name="todo"
+          [(ngModel)]="todo"
+        />
+        <div cdkDropList (cdkDropListDropped)="drop($event)">
+          <div *ngFor="let i = index; let todoItem; of: allTodo">
+            <div cdkDrag class="bg-white listItem p-2 border rounded">
+              <input
+                type="checkbox"
+                [checked]="todoItem.completed ? true : false"
+                class="ml-2 mr-4 radios"
+                (change)="handleComplete(i)"
+              />
+              <span
+                [class]="
+                  todoItem.completed
+                    ? 'text-decoration-line-through mr-5'
+                    : 'text-decoration-none mr-5'
+                "
+                (click)="handleEdit(i)"
+              >
+                {{ todoItem.name }}</span
+              >
+              <span id="showDel" class="mx-5" (click)="deleteTodo(i)"
+                >Delete</span
+              >
+            </div>
+          </div>
+          <div>{{ uncompletedTodo.length }} items left</div>
+        </div>
+      </div>
+    </div>
+    <p class="text-center">Drag and drop to reorder list</p>
+  </div>
+</div>
