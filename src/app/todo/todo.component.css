@@ -34,3 +34,12 @@
 #showDel {
   display: none;
 }
+
+.nav-item {
+  cursor: pointer;
+  font-weight: lighter !important;
+}
+
+.nav-item:hover {
+  font-weight: 400 !important;
+}

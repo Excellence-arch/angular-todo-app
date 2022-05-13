@@ -35,10 +35,20 @@
               >
             </div>
           </div>
-          <div>{{ uncompletedTodo.length }} items left</div>
+          <div class="bg-white p-2 border rounded">
+            <ul class="nav">
+              <li class="nav-item mx-auto">
+                {{ uncompletedTodo.length }} items left
+              </li>
+              <li class="nav-item mx-auto">All</li>
+              <li class="nav-item mx-auto">Active</li>
+              <li class="nav-item mx-auto">Completed</li>
+              <li class="nav-item mx-auto">Clear Completed</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <p class="text-center">Drag and drop to reorder list</p>
+    <p class="text-center mt-4">Drag and drop to reorder list</p>
   </div>
 </div>
